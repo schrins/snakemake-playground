@@ -1,0 +1,7 @@
+# hosted workflow/Snakefile
+rule multiQC:
+    conda:"envs/multiqc.yml"
+    shell:
+        """
+        multiqc {input} --filename {output} 
+        """
